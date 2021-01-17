@@ -848,9 +848,9 @@ function buildGeneric(defines, dir) {
       )
       .pipe(gulp.dest(dir + "web")),
 
-    gulp
-      .src("")
-      .pipe(gulp.dest(dir + "web")),
+    // gulp
+    //   .src("")
+    //   .pipe(gulp.dest(dir + "web")),
   ]);
 }
 
@@ -1021,9 +1021,9 @@ function buildMinified(defines, dir) {
       )
       .pipe(gulp.dest(dir + "web")),
 
-    gulp
-      .src("")
-      .pipe(gulp.dest(dir + "web")),
+    // gulp
+    //   .src("")
+    //   .pipe(gulp.dest(dir + "web")),
   ]);
 }
 
