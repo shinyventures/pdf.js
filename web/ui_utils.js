@@ -882,6 +882,25 @@ class EventBus {
     ) {
       dispatchDOMEvent(eventName, args);
     }
+
+    // Dispatch a DOM Event for any event
+    const event = document.createEvent("CustomEvent");
+    const details = Object.create(null);
+    if (args && args.length > 0) {
+      const obj = args[0];
+      for (const key in obj) {
+        const value = obj[key];
+        if (key === "source") {
+          if (value === window || value === document) {
+            return; // No need to re-dispatch (already) global events.
+          }
+          continue; // Ignore the `source` property.
+        }
+        details[key] = value;
+      }
+    }
+    event.initCustomEvent(eventName, true, true, details);
+    document.dispatchEvent(event);
   }
 
   /**
