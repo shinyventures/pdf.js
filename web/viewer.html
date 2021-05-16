@@ -81,6 +81,38 @@ See https://github.com/adobe-type-tools/cmap-resources
   <body tabindex="1">
     <div id="outerContainer">
 
+      <div class="loader">  
+        
+        <span class="spinner">
+          <!-- By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL -->
+          <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#000">
+            <g fill="none" fill-rule="evenodd">
+                <g transform="translate(1 1)" stroke-width="2">
+                    <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                    <path d="M36 18c0-9.94-8.06-18-18-18">
+                        <animateTransform
+                            attributeName="transform"
+                            type="rotate"
+                            from="0 18 18"
+                            to="360 18 18"
+                            dur="1s"
+                            repeatCount="indefinite"/>
+                    </path>
+                </g>
+            </g>
+          </svg>
+        </span>
+
+      </div>
+
+      <header>
+        <a href="#" class="back">
+          <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </a>
+        <h1>Your Company</h1>
+        <a href="#" class="button">Download</a>
+      </header>
+
       <div id="sidebarContainer">
         <div id="toolbarSidebar">
           <div id="toolbarSidebarLeft">
